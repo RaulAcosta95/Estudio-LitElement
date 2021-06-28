@@ -1,0 +1,36 @@
+html{
+    background-color: rgb(229, 233, 240);
+}
+body {
+    width: 80vw;
+    margin: 0 auto;
+    background-color: #f1ede5;
+    padding: 0 20px 20px 20px;
+    border: 3px solid rgb(75, 73, 73);
+    border-radius: 5px;
+  }
+  h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #366a9b;
+    text-shadow: 3px 3px 3px rgb(36, 35, 35);
+    transition: 0.5s;
+  }
+  h1:hover {
+    color: #4486c4;
+    font-size: 4em;
+    transition: 0.5s;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  p {
+    text-align: justify;
+    margin: 0 auto;
+    color: rgb(168, 89, 89);
+    width: 60vw;
+    transition: 0.5s;
+
+  }
