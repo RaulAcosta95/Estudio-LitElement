@@ -5,3 +5,5 @@ import './components/carta-presentacion';
 import './components/ControlDinero';
 import './components/botones-importados'
 import './components/LifeCycleExamples';
+import './components/updateCompleteExample';
+import './components/EstilosImportadosBoton';

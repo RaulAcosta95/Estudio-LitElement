@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit-element';
-
+import './updateCompleteExample';
 export class LifeCycleExamples extends LitElement {
     static get properties(){
         return{
@@ -26,6 +26,11 @@ export class LifeCycleExamples extends LitElement {
         super.disconnectedCallback();
         console.log('Life Cycle Example: Disconnected Callback Example');
     }
+    async performUpdate() {
+        await new Promise((resolve) => requestAnimationFrame(() => resolve()));
+        console.log('Life Cycle Example: performUpdate');
+        super.performUpdate();
+      }
     render(){
         return html `
             <style>
@@ -52,6 +57,7 @@ export class LifeCycleExamples extends LitElement {
                 <p>Esta es una propiedad  sin hasChanged [<b>${this.mensaje2}</b>] </p>
                 <input type="text" vaule="${this.mensaje}" @change="${this.cambiarMensaje}" placeholder="Cambia la propiedad">
                 <p class="nota">NOTA: hasChanged() me genera conflicto cuando mensaje2 no existe</p>
+                <update-complete-example></update-complete-example>
             </div>
         `
     }
@@ -73,5 +79,11 @@ export class LifeCycleExamples extends LitElement {
           console.log('Life Cycle Example: requestUpdate: mensaje '+ oldValue);
         });
     }
+    // shouldUpdate(changedProperties) {
+    //     changedProperties.forEach((oldValue, propName) => {
+    //       console.log(`Life Cycle Example: changedProperties: Propiedad: ${propName} changed. oldValue: ${oldValue}`);
+    //     });
+    //     return changedProperties.has('mensaje');
+    //   }
 }
 customElements.define('life-cycle-example', LifeCycleExamples);
