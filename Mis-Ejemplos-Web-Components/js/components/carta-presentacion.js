@@ -77,6 +77,7 @@ export class CartaPresentacion extends LitElement {
     cambiarNombre(e){
         this.nombre=e.target.value;
         console.log(this.nombre);
+        console.log(e.bubbles);
     }
     cambiarEspecialidad(e){
         this.especialidad=e.target.value;

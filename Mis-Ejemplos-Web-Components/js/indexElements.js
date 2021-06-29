@@ -4,3 +4,4 @@ import './components/MensajePopUp';
 import './components/carta-presentacion';
 import './components/ControlDinero';
 import './components/botones-importados'
+import './components/LifeCycleExamples';
