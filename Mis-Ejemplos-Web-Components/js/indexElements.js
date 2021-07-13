@@ -7,3 +7,5 @@ import './components/botones-importados'
 import './components/LifeCycleExamples';
 import './components/updateCompleteExample';
 import './components/EstilosImportadosBoton';
+import './components/myCounter13Jul';
+
