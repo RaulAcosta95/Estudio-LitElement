@@ -1,6 +1,6 @@
 
 class MyCounter extends HTMLElement{
-
+    //Atributos son de la etiqueta
     static get observedAttributes(){
         return ['count'];
     }
