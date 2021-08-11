@@ -8,8 +8,11 @@
     transition: 0.5s;
 }
 .secciones{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
 }
 
 .primera-seccion h1 {
@@ -25,8 +28,19 @@
     font-size: 2em;
     transition: 1s;
 }
-.primera-seccion  p, li {
+.primera-seccion li {
     font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    transition: 0.4s;
+
+}
+.primera-seccion li:hover{
+    text-decoration: underline;
+    transition: 0.4s;
+}
+.primera-seccion p {
+    font-size: 20px;
     line-height: 2;
     letter-spacing: 1px;
 }
@@ -35,6 +49,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-top: 25px;
 }
 .botones button{
     display: inline-block;
@@ -65,8 +80,8 @@
     background: linear-gradient(101deg, #3474b1 87%, rgba(85, 98, 219, 1) 95%);
     margin-left: 10px;
   }
-.descripcion:hover{
-    color: black;
+.descripcion p:hover{
+    color: rgb(241, 15, 15);
     transition: 0.5s;
 }
 .nombre-usuario{
@@ -80,5 +95,16 @@
     text-shadow:  4px 4px 2px rgba(114, 114, 114, 0.78);
   
     transition: 0.5s;
+
+}
+@media (min-width: 0) and (max-width: 380px){
+    .secciones{
+        margin-left: 40px;
+        justify-content:flex-start;
+    }
+    .enlaces, .blandas{
+        margin-top: 20px;
+    }
+    
 
 }
