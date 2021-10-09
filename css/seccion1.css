@@ -105,6 +105,8 @@
     .enlaces, .blandas{
         margin-top: 20px;
     }
-    
+    .primera-seccion h1 {
+        font-size: 40px;
+    }
 
 }
